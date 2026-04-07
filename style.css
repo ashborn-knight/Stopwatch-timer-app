@@ -90,3 +90,17 @@ ul{
     box-shadow: 0 0 12 rgba(0,0,0,0.1);
 
 }
+
+li{
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+
+}
+li:last-child{
+    border-bottom: none;
+
+}
+li span {
+    font-weight: 700;
+    
+}
