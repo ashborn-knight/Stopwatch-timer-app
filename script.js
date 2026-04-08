@@ -37,8 +37,19 @@ function resetTimer(){
 }
 function updateTimer(){
     milliseconds++
-    if(milliseconds ===100){
+    if(milliseconds === 100){ ////1000 1seconds= 1000millisecondds
         milliseconds = 0;
         seconds++;
+        if(seconds === 60){
+            seconds = 0;
+            minutes++;
+        }
     }
+
+    displayTimer();
+}
+
+function displayTimer(){
+    millisecondsLabel.textContent = seconds;
+    minutesLabel.textContent = seconds;
 }
