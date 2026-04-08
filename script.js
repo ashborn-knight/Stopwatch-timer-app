@@ -33,5 +33,12 @@ function pauseTimer(){
 
 }
 function resetTimer(){
-    
+
+}
+function updateTimer(){
+    milliseconds++
+    if(milliseconds ===100){
+        milliseconds = 0;
+        seconds++;
+    }
 }
