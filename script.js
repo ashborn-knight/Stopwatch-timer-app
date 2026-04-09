@@ -33,16 +33,21 @@ function startTimer(){
 }
 function stopTimer(){
 
+    clearInterval(interval);
+    addToLapList();
+    resetTimerData();
+    startButton.disabled = false;
+
 }
 function pauseTimer(){
     clearInterval(interval);
-    pauseButton.disabled= true;
+    pauseButton.disabled= false;
 
 }
 function resetTimer(){
     clearInterval(interval);
     resetTimerData();
-    resetTimerData.disabled = true;
+    startButton.disabled = false;
 
 
 }
@@ -75,4 +80,11 @@ function resetTimerData(){
     seconds = 0;
     miliseconds = 0;
     displayTimer();
+}
+function addToLapList(){
+    const lapTime = ${padTime(mintues)}; ${padTime(seconds)}:${padTime(milliseconds)};
+    const listItem = document.createElement('li');
+    listitem.innnerHTML = <span>Lap ${lapList.childElementCount + 1}: </span>$
+    {lapTime};
+    lapList.appendChild(listItem)
 }
