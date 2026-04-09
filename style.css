@@ -1,13 +1,13 @@
-body{
-    background: linear-gradient(25deg,#f181aa,#d36c76 50%);
+body {
+    background: linear-gradient(25deg, #f181aa, #d36c76 50%);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     font-family: sans-serif;
-
 }
-.container{
+
+.container {
     background-color: #eee9e9;
     border-radius: 16px;
     padding: 20px;
@@ -17,69 +17,67 @@ body{
     align-items: center;
 }
 
-.title{
+.title {
     font-size: 30px;
     margin-bottom: 1.5rem;
 }
 
-.stopwatch{
-    display:flex;
+.stopwatch {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap:20px;
+    gap: 20px;
 }
-.timer{
+
+.timer {
     font-size: 40px;
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 12px rgba(0,0,0,0.1);
-    animation: pulse 1.5s infinie alternate;
-
-
+    animation: pulse 1.5s infinite alternate;
 }
 
-@keyframes pulse{
-    from{
-        transform: scale(1);
-    }
-    to{
-        transform: scale(1.05);
-    }
+@keyframes pulse {
+    from { transform: scale(1); }
+    to   { transform: scale(1.05); }
 }
-.timer span{
+
+.timer span {
     width: 110px;
     display: inline-block;
     text-align: center;
 }
 
-.controls{
-    display: flx;
+.controls {
+    display: flex;
     gap: 1rem;
-
 }
-button{
+
+button {
     padding: 0.75rem 1.5rem;
-    font-size: 1 rem;
+    font-size: 1rem;
     background-color: #ffffff;
     border: none;
     border-radius: 8px;
-    cursor:pointer;
+    cursor: pointer;
     transition: background-color 0.3s ease-in-out;
-
 }
-button:hover{
-    background-color:#d72a76;
 
+button:hover {
+    background-color: #d72a76;
+    color: #fff;
 }
-.lap-title{
+
+.lap-title {
     font-size: 1.5rem;
-
 }
-.laps{
+
+.laps {
     width: 100%;
 }
-ul{
+
+ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -87,20 +85,18 @@ ul{
     max-height: 200px;
     background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 0 12 rgba(0,0,0,0.1);
-
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
 }
 
-li{
+li {
     padding: 1rem;
     border-bottom: 1px solid #e0e0e0;
-
 }
-li:last-child{
+
+li:last-child {
     border-bottom: none;
-
 }
+
 li span {
     font-weight: 700;
-    
 }

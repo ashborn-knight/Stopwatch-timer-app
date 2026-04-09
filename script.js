@@ -25,14 +25,25 @@ resetButton.addEventListener('click',resetTimer);
 
 function startTimer(){
 
+    interval = setInterval(updateTimer,10);
+    startButton.disabled= true;
+
+  
+
 }
 function stopTimer(){
 
 }
 function pauseTimer(){
+    clearInterval(interval);
+    pauseButton.disabled= true;
 
 }
 function resetTimer(){
+    clearInterval(interval);
+    resetTimerData();
+    resetTimerData.disabled = true;
+
 
 }
 function updateTimer(){
@@ -50,6 +61,18 @@ function updateTimer(){
 }
 
 function displayTimer(){
-    millisecondsLabel.textContent = seconds;
-    minutesLabel.textContent = seconds;
+    millisecondsLabel.textContent = padTime(milliseconds);
+    secondsLabel.textContent = padTimer(seconds);
+    minutesLabel.textContent = padTime(minutes);
+}
+
+function padTimer(time){
+    return time.toString().padStart(2,'0');
+
+}
+function resetTimerData(){
+    minutes = 0;
+    seconds = 0;
+    miliseconds = 0;
+    displayTimer();
 }
